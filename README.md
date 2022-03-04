@@ -1,7 +1,3 @@
-Simple and Clean React App. Sass installed. Quicker startup.
+Simple and Clean React App.
 
-0. Clone
-1. Install node modules npm i -y
-2. Go!
-# AllDogs
-# AllDogs
+Displays a random collection of images of dogs. Click one to learn more about the breed temperament.
