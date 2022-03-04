@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Spacer, Box } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Flex } from "@chakra-ui/react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import "./App.scss";
 
 const url = "https://api.thedogapi.com/v1/images/search?limit=6";
@@ -57,18 +57,23 @@ function App() {
       {/* BREED DETAIL PAGE */}
       {page === "details" && (
         <div>
-          <Button onClick={togglePage} className="returnButton">
+          <Button
+            colorScheme="teal"
+            size="md"
+            onClick={togglePage}
+            className="returnButton"
+          >
+            {" "}
             Go Back
           </Button>
-          {detailsDog.breeds.length >
-            0(
-              <div>
-                <h2>{detailsDog.breeds[0].name}</h2>
-                <div className="temperament">
-                  {detailsDog.breeds[0].temperament}
-                </div>
+          {detailsDog.breeds.length > 0 && (
+            <div>
+              <h2>{detailsDog.breeds[0].name}</h2>
+              <div className="temperament">
+                {detailsDog.breeds[0].temperament}
               </div>
-            )}
+            </div>
+          )}
           <img src={detailsDog.url} alt="dog" />
         </div>
       )}
