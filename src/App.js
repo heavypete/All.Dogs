@@ -60,7 +60,8 @@ function App() {
         <div>
           <Button
             colorScheme="teal"
-            size="md"
+            size="lg"
+            align="center"
             onClick={togglePage}
             className="returnButton"
           >
