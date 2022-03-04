@@ -6,19 +6,25 @@ body {
 .App {
   font-size: 1.6rem;
   padding: 20px;
+  display: block;
   h1 {
     font-size: 2.5rem;
-    color: #777;
+    color: rgb(68, 128, 150);
     font-weight: bold;
     margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
   }
   h2 {
     font-size: 2rem;
     color: #888;
+    font-variant: small-caps;
     font-weight: bold;
     margin: 10px 0;
     background-color: #eee;
     padding: 5px;
+    display: flex;
+    justify-content: center;
   }
   h1:not(:first-of-type) {
     margin-top: 20px;
@@ -34,6 +40,11 @@ body {
 
   img {
     cursor: pointer;
+  }
+
+  .temperament {
+    display: flex;
+    justify-content: space-around;
   }
   .container {
     @media (min-width: 578px) {

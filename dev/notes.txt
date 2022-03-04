@@ -7,6 +7,6 @@ https://api.thedogapi.com/v1/images/search?limit=5
 	X show dummy title
 	x show breed name or none
 
-	* click on h3 and see dummy page with back click
-	* make a return link
+	x click on h3 and see dummy page with back click
+	x make a return link
 	* incorporate API key

@@ -4,7 +4,7 @@ import { Flex } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import "./App.scss";
 
-const url = "https://api.thedogapi.com/v1/images/search?limit=6";
+const url = "https://api.thedogapi.com/v1/images/search?limit=24";
 
 function App() {
   const [dogs, setDogs] = useState([]);
@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <h1> All the Dogs</h1>
-      {dogs.length > 0 && <p> There are {dogs.length} dogs.</p>}
+
       {/* MAIN PAGE */}
       {page === "main" && (
         <Flex className="container" flexWrap="wrap">
