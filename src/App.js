@@ -4,8 +4,8 @@ import { Flex } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import "./App.scss";
 
-const myApiKey = "17460dc6-8492-40f2-abd5-62c692647c6c";
-const url = "https://api.thedogapi.com/v1/images/search?limit=24";
+//const myApiKey = "17460dc6-8492-40f2-abd5-62c692647c6c";
+const url = "https://api.thedogapi.com/v1/images/search?limit=6";
 
 function App() {
   const [dogs, setDogs] = useState([]);
@@ -28,6 +28,12 @@ function App() {
     setDetailsDog({ ...dog });
     setPage(_page);
     console.log(page);
+  };
+
+  const handleClick = async () => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setDogs([...data]);
   };
 
   const getBreedName = (dog) => {
@@ -53,8 +59,19 @@ function App() {
               </Box>
             );
           })}
+          <Button
+            colorScheme="teal"
+            size="lg"
+            align="center"
+            onClick={handleClick}
+            className="returnButton"
+          >
+            {" "}
+            Refresh Dogs
+          </Button>
         </Flex>
       )}
+
       {/* BREED DETAIL PAGE */}
       {page === "details" && (
         <div>
