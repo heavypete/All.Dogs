@@ -5,7 +5,7 @@ import { Button } from "@chakra-ui/react";
 import "./App.scss";
 
 //const myApiKey = "17460dc6-8492-40f2-abd5-62c692647c6c";
-const url = "https://api.thedogapi.com/v1/images/search?limit=6";
+const url = "https://api.thedogapi.com/v1/images/search?limit=8";
 
 function App() {
   const [dogs, setDogs] = useState([]);
