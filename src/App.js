@@ -34,6 +34,7 @@ function App() {
     const response = await fetch(url);
     const data = await response.json();
     setDogs([...data]);
+    setPage("main");
   };
 
   const getBreedName = (dog) => {
@@ -46,9 +47,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1> All the Dogs</h1>
+      <h1> Look at Dogs. Be Happy.</h1>
 
       {/* MAIN PAGE */}
+      <Button
+        colorScheme="teal"
+        size="lg"
+        onClick={handleClick}
+        className="returnButton"
+        mb="5px"
+      >
+        {" "}
+        Refresh Dogs
+      </Button>
       {page === "main" && (
         <Flex className="container" flexWrap="wrap">
           {dogs.map((dog, index) => {
@@ -59,16 +70,6 @@ function App() {
               </Box>
             );
           })}
-          <Button
-            colorScheme="teal"
-            size="lg"
-            align="center"
-            onClick={handleClick}
-            className="returnButton"
-          >
-            {" "}
-            Refresh Dogs
-          </Button>
         </Flex>
       )}
 
